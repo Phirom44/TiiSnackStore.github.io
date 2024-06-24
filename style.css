@@ -1,122 +1,981 @@
 
-
-body{
-  
-    background-color: gainsboro;    
-}
-.Im{
-       color: black;
-        display: block;
-        margin-top: 3rem;
-        margin-left: auto;
-        margin-right: auto;
-        width: 40%;
-        height: auto;
-       border-radius:10%;
-       box-shadow: 0px 2px 12px 0px;
-       background-image: url();
-}
-div{
-    
+body {
+    margin: 0;
+    background-color: #f5f5f5;
     text-align: center;
    
 }
-p{
-    font-family: 'Fasthand', cursive;
-    font-weight: bolder ;     
- }
-h2{
-    margin-bottom: auto;
-    font-family: Impact, Haettenschweiler, 'Arial  Bold', sans-serif;
-}
-button{
-    padding: 10px;
-    font-family: Arial  ;
-    font-size: larger;
-    border-radius: 10px;   
+ul#downArrow {
+    position: relative;
+    width: 17.5px; /* Adjust the width to make the container smaller */
+    display: flex;
+    align-items: center;
+    flex-flow: column;
 }
 
-.Facebook{
-   background-color: darkcyan;
-    margin-bottom: 1.2rem;
-    box-shadow: 2px 6px;
-    width: 70%;
-   color: black;
-   
+ul#downArrow li {
+    list-style: none;
+    width: 3px; /* Adjust the width to make the arrow smaller */
+    height: 3px; /* Adjust the height to make the arrow smaller */
+    background-color: #305fa2;
+    border-radius: 100%;
+    margin-bottom: 5px; /* Adjust the margin to control spacing */
+    animation: ani 0.8s infinite ease-in-out;
+    animation-delay: calc(0.2s * var(--i));
 }
-.Telegram{
-    background-color: darkcyan;
-    margin-bottom:  1.2rem;
-    box-shadow: 2px 6px;
-    width: 70%;
-    color: black;
+
+ul#downArrow::before,
+ul#downArrow::after {
+    position: absolute;
+    content: '';
+    background-color: #305fa2;
+    width: 13px; /* Adjust the width of the lines */
+    height: 2px; /* Adjust the height of the lines */
+    bottom: 0;
 }
-.teleme{
-    background-color: darkcyan;
-    margin-bottom:  1.2rem;
-    box-shadow: 2px 6px;
-    width: 70%;
-    color: black;
+
+ul#downArrow::before {
+    right: 0;
+    transform: rotate(-45deg);
+    transform-origin: center right;
 }
-.Instagram{
-    background-color: darkcyan;
-    margin-bottom:  1.2rem;
-    box-shadow: 2px 6px;
-    width: 70%;
-    color: black;
+
+ul#downArrow::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: center left;
 }
-.TikTok{
-    background-color: darkcyan;
-    margin-bottom:  3rem;
-    box-shadow: 2px 6px;
-    width: 70%;
-    color: black;
-}
-.Facebook:hover {
-    background-color: blue;
-    color: white;
-    
-}
-.Telegram:hover {
-    background-color: blue;
-    color: white;
-    
-}
-.teleme:hover {
-    background-color: blue;
-    color: white;
-    
-}
-.Instagram:hover {
-    background-color: blue;
-    color: white;
-    
-}
-.TikTok:hover {
-    background-color: blue;
-    color: white;
-    
-}
-@keyframes running-color {
+
+@keyframes ani {
     0% {
-        color: darkorchid;
-    }
-    25% {
-        color: blue;
+        opacity: 0;
+        transform: translateY(-1px); /* Adjust the translateY value */
     }
     50% {
-        color: darkmagenta;
-    }
-    75% {
-        color: gray;
+        opacity: 1;
+        transform: translateY(6px); /* Adjust the translateY value */
     }
     100% {
-        color: darkred;
+        opacity: 0;
+        transform:   translateY(12px); /* Adjust the translateY value */
     }
 }
 
-.running-text {
-    animation: running-color 6s infinite;
+/* 
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 1000;
+  
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #ff5733;
+} */
+
+
+
+
+.content {
+    margin-top: 60px; /* Adjust based on the height of your navbar */
+    padding: 20px; /* Just for demonstration */
+}
+/* Additional styles for your content */
+
+/* Add the following CSS to make the text flex width */
+
+/* Add the following CSS to center the content in the about section */
+
+
+
+.kbal {
+    margin-top: 2rem;
+    text-align: center;
+    font-family: 'Lilita One', sans-serif;
+    color: #305fa2;
+    padding: 20px; /* Add padding for better spacing on smaller screens */
+}
+/* .p-r{
+    border: 2px solid;
+    margin-left: 10%;
+    margin-right: 10%;
+} */
+
+h1 {
+    font-family: 'Bayon', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0%;
+    font-size: 250%;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0%;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border:1px solid #305fa2 ;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #305fa2;
+}
+
+button:hover {
+    background-color: #5379f7; /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+}
+
+.Abouts {
+    text-align: center;
+    display: flex;
+    margin-top: 5px;
+    margin-right: 1px;
+    margin-left: 1px;
+    justify-content: center; /* Center items horizontally */
+    align-items: baseline; /* Align items to the baseline */
+   
+}
+.flex-container {
+   
+    background-color: #305fa2;
+    padding: 2%;
+    color: #f5f5f5;
+    width: 60%;
+    height: 85%;
+    text-align: center;
+    margin: 2%;
+    border-radius: 13px;
+    /* border: 1px solid black; */
+    margin-top: 0%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: border-color 0.3s cubic-bezier(0.42, 0, 0.58, 1), transform 0.2s ease; /* Set multiple transition effects */
+
 }
 
 
+.Ptext {
+    width: 100%;
+    border: 2px solid #305fa2;
+    margin-top: auto; /* Push the .Ptext to the last baseline of .Abouts */
+    padding: 10px; /* Add padding for better visual appearance */
+}
+
+
+.About {
+    color: #305fa2;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+   margin-top: 0%;
+    display: flex;
+    text-align: center;
+    width: 90%;
+   margin: 2%;
+  
+  
+}
+
+.p-r {
+    display: flex;
+    align-items: center;
+}
+
+.aside1,
+.aside2 {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: 'Questrial', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.Me {
+    width: 40%;
+    border-radius: 120px;
+    /* border: 1px solid black; */
+    background-color: #305fa2;
+    margin: 1%;
+    margin-left: 3%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: border-color 0.3s cubic-bezier(0.42, 0, 0.58, 1), transform 0.2s ease; /* Set multiple transition effects */
+
+}
+.Me:hover {
+    box-shadow: 6px 6px  #305fa2; /* Change the border color on hover */
+    transform: translateY(-6px); /* Move the element upward on hover */
+   cursor: not-allowed;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .kbal {
+        padding: 10px; 
+        margin-top: 2rem;
+    }
+
+    button {
+        margin-top: 5%; /* Make the button full width on smaller screens */
+    }
+    .Img {
+      width: 100%;
+    }
+    .Me{
+        width: 100%;
+    }
+   
+}
+.Img {
+    width: 22%; /* Adjust the width of the image */
+    max-width: 100%; /* Ensure the image doesn't exceed its original size */
+    margin-top: 1rem;
+    border-radius: 110px 0px 110px ; /* Add border-radius for rounded corners */
+    box-shadow: 3px 4px  #305fa2;
+    border: 1px solid black;
+    background-color: #305fa2;
+    margin: 5%;
+}
+@media (max-width: 750px) {
+    .Img {
+        width: 40%;
+    }
+    .Me{
+        width: 40%;
+    }
+}
+@media (max-width: 500px) {
+    .Img {
+        width: 70%;
+    }
+    .Me{
+        width: 70%;
+    }
+}
+@media (max-width: 1024px) {
+    .Img {
+        width: 30%;
+    }
+    .flex-container {
+   
+        background-color: #305fa2;
+        padding: 20%;
+        color: #f5f5f5;
+        width: 100%;
+        height: 85%;
+        text-align: center;
+        margin: 2%;
+        border-radius: 13px;
+        /* border: 1px solid black; */
+        margin-top: 0%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        transition: border-color 0.3s cubic-bezier(0.42, 0, 0.58, 1), transform 0.2s ease; /* Set multiple transition effects */
+    
+    }
+   
+   
+    
+    
+}
+@media (max-width: 820px) {
+    .Img {
+        width: 35%;
+    }
+    
+}
+
+
+
+.tex {
+    text-align: center;
+    color: #305fa2;
+    font-family: 'Questrial', sans-serif;
+    margin-top: 3rem;
+}
+
+.S{
+    color: rgb(177, 174, 174);
+    font-family: 'Kantumruy Pro';
+    
+}
+.B{
+    margin-bottom: 2%;
+    font-family: 'Kantumruy Pro';
+}
+
+.flex-container {
+   
+    background-color: #305fa2;
+    padding: 2%;
+    color: #f5f5f5;
+    width: 40%;
+    height: 85%;
+    text-align: center;
+    margin: 2%;
+    border-radius: 13px;
+    /* border: 1px solid black; */
+    margin-top: 0%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: border-color 0.3s cubic-bezier(0.42, 0, 0.58, 1), transform 0.2s ease; /* Set multiple transition effects */
+
+}
+
+.flex-container:hover {
+    box-shadow: 6px 6px  black; /* Change the border color on hover */
+    transform: translateY(-6px); /* Move the element upward on hover */
+    cursor: pointer;
+}
+.flex-container a{
+    text-decoration: none;
+    color: white;
+}
+.Experience {
+    width: 100%;
+    border-radius: 13px;
+    margin-top: 0px;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  
+   .About{
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    margin: 3%;
+    
+   }
+   
+    
+    .Me {
+        width: 40%;
+        margin-top: 0%; /* Make the image take full width on smaller screens */
+
+    }
+  
+    .flex-container {
+        width: 40%; 
+       /* Adjust the width of the container for smaller screens */
+       padding:2%;
+      
+
+    }
+
+   
+    
+
+    .Experience {
+        width: 40%; 
+        height: 0%;
+        padding: 5px;
+    }
+}
+@media (max-width: 500px) {
+    .Abouts{
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+    }
+    .About{
+     text-align: center;
+     display: inline-block;
+     padding: 5px;
+     margin: 3%;
+     
+    }
+    
+     
+     .Me {
+         width: 70%;
+         margin-top: 0%; /* Make the image take full width on smaller screens */
+     }
+ 
+     .flex-container {
+         width: 40%; 
+        /* Adjust the width of the container for smaller screens */
+        padding:2%;
+     }
+ 
+     .Experience {
+         width: 40%; 
+         height: 0%;
+         padding: 5px;
+     }
+ }
+ @media (max-width: 768px) {
+    .Img {
+        width: 35%;
+    }
+    .Experience {
+        width: 100%; 
+        
+        padding: 1px;
+    }
+
+ }
+ @media (max-width: 600px) {
+    .Img {
+        width: 70%;
+    }
+
+ }
+
+ .PA{
+    text-align: center;
+ }
+
+ .Pabout{
+    text-align:center;
+    margin-top: 0px;
+    font-family: 'Bayon', sans-serif;
+    justify-content: center;
+    text-align: center;
+    margin-left: 6%;
+    margin-right: 6%;
+    color: #305fa2;
+    font-size: 18px;
+ }
+ .W{
+    font-family: 'Bayon', sans-serif;
+    color: #fff;
+ }
+
+ .Skill {
+    margin-top: 3rem;
+    text-align: center;
+    color: #305fa2;
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+   
+}
+
+/* General Styles */
+.Skill p {
+    margin-top: 0;
+}
+
+.D {
+   
+    width: 96%;
+    margin: 5px;
+    border-radius: 13px;
+    background-color: #305fa2;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+.d {
+    margin-left: 4%;
+}
+
+.d p {
+   display: flex;
+    margin: 9%;
+    margin-bottom: 2%;
+    
+    
+}
+
+.N p {
+    display: flex;
+     margin: 3%;
+    
+     
+     
+ }
+
+.N {
+    margin-right: 4%;
+ text-align: center;
+    
+}
+.E{
+   
+    margin: 5%;
+    margin-top: 0%;
+}
+.EE{
+   
+   
+    margin: 5%;
+    margin-top: 0%;
+    height: 40%;
+}
+.PP{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+   
+}
+
+.R {
+    display: flex;
+  
+   
+}
+.V{
+    margin-right: 3.3%;
+}
+
+.C {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 500px) {
+    .D {
+      
+       
+        margin: 5px; /* Adjust margin for smaller screens */
+        /* Remove border-radius for smaller screens */
+    }
+    .P{
+        margin-bottom: 3%;
+    }
+    .R {
+        flex-direction: column;
+        margin: 5%;
+    }
+
+    .C {
+
+        margin-right: 10px;
+        margin-bottom: 5px; /* Add margin-bottom for spacing between elements in smaller screens */
+    }
+    .Experience {
+        width: 100%; 
+        
+        padding: 1px;
+    }
+
+}
+
+
+.Back1{
+   
+    margin: 5%;
+    margin-top: 0%;
+}
+.back{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+.Back .lob{
+    text-align: right;
+   
+}
+.T{
+    text-align: 2;
+}
+.web{
+   
+    margin: 2%;
+    
+}
+.web p{
+    margin: 4%;
+    margin-top: 0%;
+}
+.L{
+   
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.P{
+    border: 1.5px solid #07bdeb;
+    border-radius: 0 0 16px 16px;
+}
+.P h4{
+    margin-top: 0%;
+    background-color: #07bdeb;
+   padding: 20px;
+   color: black;
+   border-radius: 0 0 26px 26px;
+   box-shadow: 0 1px 3px  rgb(51, 47, 47);
+   margin: 0%;
+}
+
+.we{
+    border: 2px solid;
+    width: 100%;
+}
+.gg-mail{
+    margin-left: 50%;
+}
+/* Basic styling for the footer */
+footer {
+    height: auto;
+    background-color: #00b3df; /* Background color */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for content inside the footer */
+    text-align: center; /* Center-align text */
+    color: black;
+   
+
+  }
+  
+  /* Styling for the h2 element within the footer */
+  .footer h2 {
+    font-family: 'Lilita One', sans-serif;
+    /* Remove default margin */
+    font-size: 1.5em; /* Adjust font size */
+  }
+  
+  /* Optional: Add some additional styling or adjust as needed */
+  
+  /* Reset some default styles for list items and anchor tags */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style for the navbar */
+.navbar {
+    width: 100%;
+    background-color: #00b3df;
+    overflow: auto;
+   border-radius: 8px;
+   
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  
+  .F {
+    border: 2px solid;
+    width: 30px;
+    border-radius: 8px;
+    padding: 6px;
+    margin: 1%;
+    transition: border-color 0.3s cubic-bezier(0.42, 0, 0.58, 1), transform 0.2s ease; /* Set multiple transition effects */
+}
+
+.F:hover {
+    border-color: white; /* Change the border color on hover */
+    transform: translateY(-5px); /* Move the element upward on hover */
+}
+
+
+
+
+/* Style for the sections, add more styles as needed */
+.PI {
+   
+    margin: 1%;
+    margin-top: 0%;
+    display: flex;
+    justify-content: center; /* Add this line to center horizontally */
+    align-items: center; /* Add this line to center vertically */
+}
+span {
+    content: "\00A9";
+    font-size: 20px;
+   
+  }
+
+  .copyright {
+    text-align: center; /* Center the text */
+    padding: 10px;
+    font-family: arial, sans-serif;
+   margin-bottom: 3%;
+  }
+  .AB{
+    
+    margin-bottom: 0%;
+    font-family: 'Questrial', sans-serif;
+    border-radius: 8px;
+    padding: 6px;
+    margin: 1%;
+    
+  }
+
+
+  
+
+.AB a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    
+    transition: color 0.3s;
+}
+
+.AB a:hover {
+    color: #06ff72;
+}
+
+
+
+
+
+
+
+  .Y{
+    border: 2px solid;
+    margin-left: 20%;
+    margin-right: 20%;
+   
+    
+  }
+  .IP{
+    margin-top: 6%;
+    margin-bottom: 6%;
+    border: 2px solid;
+    height: auto;
+    
+    
+  }
+  .Ppi{
+    margin: 3%;
+   
+  }
+.Ti{
+    width: 10%;
+    border-radius: 26px 26px 26px 26px;
+    border: 2px solid;
+    box-shadow: 0 1px 3px  rgb(51, 47, 47);
+
+}
+@media only screen and (max-width: 500px) {
+    .Ti{
+        width: 30%;
+    }
+    .AB{
+        margin: 0%;
+    }
+    .Experience {
+        width: 100%; 
+        
+        padding: 1px;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .AB{
+        margin: 1%;
+    }
+    .Ti{
+        width: 30%;
+    }
+    .Experience {
+        width: 100%; 
+        
+        padding: 1px;
+    }
+
+}
+.Free{
+    width: 40%;
+   
+    
+}
+.iconfrelancer{
+   
+    display: flex;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+}
+
+.Ui{
+   
+   
+    display: flex;
+    margin-right: 10%;
+    margin-left: 10%;
+   
+}
+
+@media only screen and (max-width: 500px) {
+    .Free{
+        width: 50%;
+    }
+    .Experience {
+        width: 100%; 
+        
+        padding: 1px;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .Fre{
+        width: 40%;
+    }
+    .Experience {
+        width: 100%; 
+        
+        padding: 1px;
+    }
+
+   
+}
+
+.No .comin{
+    color: #535558;
+    
+}
+.P .comin{
+    color: #535558;
+    
+}
+.F {
+    position: relative;
+    margin: 10px; /* Adjust the margin as needed */
+}
+
+.F a i {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.F a:hover i {
+    color: blue;
+}
+
+.F a:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -25px; /* Adjust the positioning as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    z-index: 1;
+}
+
+
+
+.Te{
+    margin-top: 1.1%;
+    font-family: 'Bayon', sans-serif;
+}
+.LL {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid;
+}
+
+.item {
+    margin: 10px; /* Adjust the margin between items as needed */
+    text-align: center;
+}
+
+.Ti {
+    max-width: 100%;
+    height: auto;
+}
+.social-media-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.social-media-icon img {
+    /* Adjust size as needed */
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+
+.social-media-icon a {
+    display: block;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.social-media-icon p {
+    margin: 0;
+    font-size: 16px; /* Adjust font size as needed */
+    color: white; /* Adjust color as needed */
+    
+}
+@keyframes colorRun {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.color-run {
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ffff00, #ff0000);
+    background-size: 200%;
+    -webkit-background-clip : text;
+    -webkit-text-fill-color: transparent;
+    animation: colorRun 5s linear infinite; /* Apply animation */
+}
